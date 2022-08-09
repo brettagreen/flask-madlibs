@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Choose a story{% endblock %}
+{% block content %}
+  <form action="/form">
+    <label for="stories">
+      Select your story:&nbsp;
+    </label>
+    <select name="my_story">
+        {% for story in stories %}
+        <option value="{{story.title}}">{{story.title}}</option>
+        {% endfor %}
+    </select>
+    <button>Submit</button>
+  </form>
+  <div>
+    Or, you can always... <a href="/submit_story">Create your own Mad Lib</a>
+  </div>
+{% endblock %}

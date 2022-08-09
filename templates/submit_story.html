@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+  {% block title %}
+    Create a Mad Lib!
+  {% endblock %}
+
+  {% block content %}
+  <h2>Choose as many {parts of speech} as you like:</h2>
+  <form action="/create_story" method="post">
+    <label for="title">Give your story a title: </label>&nbsp
+    <input type="text" name="title"><br /> <br />
+    <label for="story">Place story text here: </label>&nbsp
+    <input type="text" name="story" placeholder="eg. I went for a {adjective} walk down by the {place}..."><br /><br />
+    <button>Submit</button>
+  </form>
+
+  {% endblock %}
